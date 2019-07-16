@@ -1,7 +1,7 @@
 <template>
-  <sui-segment color="grey" inverted>
+  <sui-segment inverted>
     <div class="bar">
-      <sui-input></sui-input>
+      <sui-input placeholder="Search..." icon="search"></sui-input>
     </div>
   </sui-segment>
 </template>
@@ -12,7 +12,7 @@ export default {};
 
 <style scoped>
 .bar {
-  align-items: right;
+  text-align: right;
   color: yellow;
 }
 </style>
