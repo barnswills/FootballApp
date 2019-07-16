@@ -1,5 +1,5 @@
 <template>
-  <h1> Weather...</h1>
+  <h1> Charts here</h1>
 </template>
 
 <script>
