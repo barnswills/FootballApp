@@ -1,2 +1,0 @@
-# FootballApp
-Created with CodeSandbox
