@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <TablePosition/>
+    <SearchBar></SearchBar>
+    <DataHolder></DataHolder>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import TablePosition from "./components/TablePosition";
+import DataHolder from "./components/DataHolder";
+import SearchBar from "./components/SearchBar";
 
 export default {
   name: "App",
   components: {
-    TablePosition
+    DataHolder,
+    SearchBar
   },
   mounted() {
     console.log("App has mounted");
@@ -26,6 +28,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 1px;
 }
 </style>

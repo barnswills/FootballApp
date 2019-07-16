@@ -1,9 +1,10 @@
 <template>
-  <h1> Hello</h1>
+  <h1> Weather...</h1>
 </template>
 
 <script>
+
 export default {
-  name: "TablePosition",
+  name: "DataHolder",
 }
 </script>
