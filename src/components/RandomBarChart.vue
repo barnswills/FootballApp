@@ -1,6 +1,7 @@
 
 <script>
 import { Bar } from "vue-chartjs";
+import { numbers, colors } from "../utils/randomUtils";
 
 export default {
   extends: Bar,
@@ -22,15 +23,24 @@ export default {
       ],
       datasets: [
         {
-          label: "Data One",
-          backgroundColor: "#f87979",
-          data: [10, 20, 34, 55]
+          label: null,
+          backgroundColor: colors(12),
+          data: numbers(12)
         }
       ]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            }
+          }
+        ]
+      }
     },
 
     methods: {

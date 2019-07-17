@@ -1,12 +1,19 @@
 <template>
-  <div>
-    <div class="bar-chart">
-      <RandomBarChart></RandomBarChart>
-    </div>
-    <div class="pie-chart">
-      <RandomPieChart></RandomPieChart>
-    </div>
-  </div>
+  <sui-grid>
+    <sui-grid-row>
+      <sui-grid-column :width="8">
+        <div class="bar-chart">
+          <RandomBarChart></RandomBarChart>
+        </div>
+      </sui-grid-column>
+
+      <sui-grid-column :width="8">
+        <div class="pie-chart">
+          <RandomPieChart></RandomPieChart>
+        </div>
+      </sui-grid-column>
+    </sui-grid-row>
+  </sui-grid>
 </template>
 
 <script>
@@ -21,12 +28,12 @@ export default {
 
 <style scoped>
 .bar-chart {
-  margin: 50px;
-  width: 65%;
+  margin: 10px;
+  width: 100%;
 }
 .pie-chart {
-  margin: 50px;
-  width: 65%;
+  margin: 10px;
+  width: 100%;
 }
 </style>
 
