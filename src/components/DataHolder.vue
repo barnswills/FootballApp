@@ -1,16 +1,16 @@
 <template>
-  <sui-grid>
+  <sui-grid class="chart-grid">
     <sui-grid-row>
       <sui-grid-column :width="8">
-        <div class="bar-chart">
+        <sui-card class="bar-chart">
           <RandomBarChart></RandomBarChart>
-        </div>
+        </sui-card>
       </sui-grid-column>
 
       <sui-grid-column :width="8">
-        <div class="pie-chart">
+        <sui-card class="pie-chart">
           <RandomPieChart></RandomPieChart>
-        </div>
+        </sui-card>
       </sui-grid-column>
     </sui-grid-row>
   </sui-grid>
@@ -28,12 +28,17 @@ export default {
 
 <style scoped>
 .bar-chart {
-  margin: 10px;
+  margin: 5px;
   width: 100%;
+  padding: 20px;
 }
 .pie-chart {
-  margin: 10px;
+  margin: 5px;
   width: 100%;
+  padding: 20px;
+}
+.chart-grid {
+  margin: 30px;
 }
 </style>
 

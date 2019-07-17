@@ -2,7 +2,7 @@ export const numbers = amount => {
   let holder = [];
 
   for (let i = 0; i < amount; i++) {
-    const number = Math.floor(Math.random() * 100);
+    const number = Math.floor(Math.random() * 100) + 1;
     holder.push(number);
   }
 

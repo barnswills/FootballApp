@@ -1,33 +1,28 @@
 
 <script>
 import { Pie } from "vue-chartjs";
+import { numbers, colors } from "../utils/randomUtils";
+
+// global constants
+const mColors = colors(6);
+const mNumbers = numbers(6);
 
 export default {
   extends: Pie,
   data: () => ({
     chartdata: {
-      labels: [
-        "Purple", "Pink", "Magenta"
-      ],
+      labels: mColors,
       datasets: [
         {
           label: "Data One",
-          backgroundColor: ["Purple", "Pink", "Magenta"],
-          data: [10, 20, 34]
+          backgroundColor: mColors,
+          data: mNumbers
         }
       ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false
-    },
-
-    methods: {
-      nums: () => {
-        const x = [10, 20, 34, 55];
-
-        return x;
-      }
     }
   }),
 

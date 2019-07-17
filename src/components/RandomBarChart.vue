@@ -23,7 +23,6 @@ export default {
       ],
       datasets: [
         {
-          label: null,
           backgroundColor: colors(12),
           data: numbers(12)
         }
@@ -32,6 +31,9 @@ export default {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
       scales: {
         yAxes: [
           {
