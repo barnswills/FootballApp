@@ -3,6 +3,11 @@
 import { Bar } from "vue-chartjs";
 import { numbers, colors } from "../utils/randomUtils";
 
+// global constants
+const MONTHS = 12;
+const mColors = colors(MONTHS);
+const mNumbers = numbers(MONTHS);
+
 export default {
   extends: Bar,
   data: () => ({
@@ -23,8 +28,8 @@ export default {
       ],
       datasets: [
         {
-          backgroundColor: colors(12),
-          data: numbers(12)
+          backgroundColor: mColors,
+          data: mNumbers
         }
       ]
     },
@@ -42,14 +47,6 @@ export default {
             }
           }
         ]
-      }
-    },
-
-    methods: {
-      nums: () => {
-        const x = [10, 20, 34, 55];
-
-        return x;
       }
     }
   }),
