@@ -6,7 +6,6 @@
           <RandomBarChart></RandomBarChart>
         </sui-card>
       </sui-grid-column>
-
       <sui-grid-column :width="8">
         <sui-card class="pie-chart">
           <RandomPieChart></RandomPieChart>
