@@ -54,6 +54,7 @@ export default {
 }
 .chart-grid {
   margin: 30px;
+  width: 100%;
 }
 </style>
 

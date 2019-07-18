@@ -1,7 +1,7 @@
 <template>
   <sui-segment inverted>
-    <div class="bar">
-      <sui-input placeholder="Search..." icon="search"></sui-input>
+    <div class="bar-container">
+      <sui-input class="bar-input" placeholder="Search..." icon="search"></sui-input>
     </div>
   </sui-segment>
 </template>
@@ -11,8 +11,11 @@ export default {};
 </script>
 
 <style scoped>
-.bar {
+.bar-container {
   text-align: right;
-  color: yellow;
+  margin: 5px;
+}
+.bar-input {
+  width: 20%;
 }
 </style>

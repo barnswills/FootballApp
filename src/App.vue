@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <SearchBar></SearchBar>
-    <DataHolder></DataHolder>
+    <div class="data-holder">
+      <DataHolder></DataHolder>
+    </div>
   </div>
 </template>
 
@@ -30,5 +32,10 @@ export default {
   color: #2c3e50;
   margin-top: 0px;
   background-color: white;
+}
+.data-holder {
+  margin: auto;
+  width: 75%;
+  padding: 10px;
 }
 </style>
