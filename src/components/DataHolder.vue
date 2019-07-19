@@ -2,9 +2,9 @@
   <sui-grid class="chart-grid" stackable>
     <sui-grid-row>
       <sui-button-group class="btn-container">
-        <sui-button content="Bar" @click="currentGraph = 'barChart'"/>
-        <sui-button content="Pie" @click="currentGraph = 'pieChart'"/>
-        <sui-button content="Line" @click="currentGraph = 'lineChart'"/>
+        <sui-button :active="isActive('barChart')" content="Bar" @click="currentGraph = 'barChart'"/>
+        <sui-button :active="isActive('pieChart')" content="Pie" @click="currentGraph = 'pieChart'"/>
+        <sui-button :active="isActive('lineChart')" content="Line" @click="currentGraph = 'lineChart'"/>
       </sui-button-group>
     </sui-grid-row>
     <sui-grid-row>
@@ -29,7 +29,7 @@ export default {
     pieChart: RandomPieChart,
     lineChart: RandomLineChart
   },
-  data: () => {
+  data:  () => {
     return {
       currentGraph: "barChart",
       testBool: false
@@ -41,8 +41,12 @@ export default {
       this.currentGraph = name;
       //this.$store.commit("switchGraph", name);
     },
-    isActive: name => {
-      return name === this.currentGraph;
+    isActive: function(name) {
+      var vm = this;
+
+      const c = vm.currentGraph;
+
+      return name === c;
     }
   }
 };
