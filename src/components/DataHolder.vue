@@ -2,9 +2,21 @@
   <sui-grid class="chart-grid" stackable>
     <sui-grid-row>
       <sui-button-group class="btn-container">
-        <sui-button :active="isActive('barChart')" content="Bar" @click="currentGraph = 'barChart'"/>
-        <sui-button :active="isActive('pieChart')" content="Pie" @click="currentGraph = 'pieChart'"/>
-        <sui-button :active="isActive('lineChart')" content="Line" @click="currentGraph = 'lineChart'"/>
+        <sui-button
+          :active="isActive('barChart')"
+          content="Bar"
+          @click="currentGraph = 'barChart'"
+        />
+        <sui-button
+          :active="isActive('pieChart')"
+          content="Pie"
+          @click="currentGraph = 'pieChart'"
+        />
+        <sui-button
+          :active="isActive('lineChart')"
+          content="Line"
+          @click="currentGraph = 'lineChart'"
+        />
       </sui-button-group>
     </sui-grid-row>
     <sui-grid-row>
@@ -29,10 +41,9 @@ export default {
     pieChart: RandomPieChart,
     lineChart: RandomLineChart
   },
-  data:  () => {
+  data: () => {
     return {
-      currentGraph: "barChart",
-      testBool: false
+      currentGraph: "barChart"
     };
   },
   methods: {
