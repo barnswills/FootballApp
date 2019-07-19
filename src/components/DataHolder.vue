@@ -43,10 +43,8 @@ export default {
     },
     isActive: function(name) {
       var vm = this;
-
-      const c = vm.currentGraph;
-
-      return name === c;
+      const current = vm.currentGraph;
+      return name === current;
     }
   }
 };
