@@ -5,6 +5,16 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    test: "test"
+    test: "test",
+    selectedGraph: "bar"
+  },
+  mutations: {
+    switchGraph(state, name) {
+      console.log("changing store " + name);
+      state.selectedGraph = name;
+    }
+  },
+  getters: {
+    selectedGraph: state => state.selectedGraph
   }
 });
