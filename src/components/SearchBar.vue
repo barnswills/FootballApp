@@ -1,5 +1,5 @@
 <template>
-  <sui-segment inverted>
+  <sui-segment inverted style="margin-top: -2px;">
     <div class="bar-container">
       <sui-input class="bar-input" placeholder="Search..." icon="search"></sui-input>
     </div>
@@ -13,7 +13,6 @@ export default {};
 <style scoped>
 .bar-container {
   text-align: right;
-  margin: 5px;
 }
 .bar-input {
   width: 20%;

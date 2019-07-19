@@ -35,7 +35,7 @@ export default {
 }
 .data-holder {
   margin: auto;
-  width: 75%;
+  width: 55%;
   padding: 10px;
 }
 </style>

@@ -1,31 +1,17 @@
 <template>
-  <sui-grid class="chart-grid">
+  <sui-grid class="chart-grid" stackable>
     <sui-grid-row>
-      <sui-button-group>
-        <sui-button content="Bar" @click="invokeChange('bar')"/>
-        <sui-button content="Pie" @click="invokeChange('pie')"/>
-        <sui-button content="Line" @click="invokeChange('line')"/>
+      <sui-button-group class="btn-container">
+        <sui-button content="Bar" @click="currentGraph = 'barChart'"/>
+        <sui-button content="Pie" @click="currentGraph = 'pieChart'"/>
+        <sui-button content="Line" @click="currentGraph = 'lineChart'"/>
       </sui-button-group>
     </sui-grid-row>
-
-    <!-- <sui-grid-row>
-      <sui-grid-column :width="8">
-        <sui-card class="bar">
-          <RandomBarChart></RandomBarChart>
-        </sui-card>
-      </sui-grid-column>
-      <sui-grid-column :width="8">
-        <sui-card class="pie">
-          <RandomPieChart></RandomPieChart>
-        </sui-card>
-      </sui-grid-column>
-    </sui-grid-row>-->
     <sui-grid-row>
       <sui-grid-column>
-        <sui-card class="this.currentGraph">
-          <!-- <h3>Revenue</h3> -->
+        <sui-segment class="graph-container">
           <component :is="currentGraph"></component>
-        </sui-card>
+        </sui-segment>
       </sui-grid-column>
     </sui-grid-row>
   </sui-grid>
@@ -39,43 +25,35 @@ import RandomLineChart from "./RandomLineChart";
 export default {
   name: "DataHolder",
   components: {
-    bar: RandomBarChart,
-    pie: RandomPieChart,
-    line: RandomLineChart
+    barChart: RandomBarChart,
+    pieChart: RandomPieChart,
+    lineChart: RandomLineChart
   },
   data: () => {
     return {
-      currentGraph: "bar"
+      currentGraph: "barChart",
+      testBool: false
     };
   },
   methods: {
     invokeChange: name => {
       console.log("switching to " + name);
-      this.$store.commit("switchGraph", name);
+      this.currentGraph = name;
+      //this.$store.commit("switchGraph", name);
+    },
+    isActive: name => {
+      return name === this.currentGraph;
     }
   }
 };
 </script>
 
 <style scoped>
-.bar {
-  margin: 5px;
+.graph-container {
+  margin-left: -15px;
   width: 100%;
-  padding: 20px;
-  background-color: red;
 }
-.pie {
-  margin: 5px;
-  width: 100%;
-  padding: 20px;
-  background-color: blue;
-}
-.line {
-  margin: 5px;
-  width: 100%;
-  padding: 20px;
-  background-color: green;
-}
+
 .chart-grid {
   margin: 30px;
   width: 100%;
